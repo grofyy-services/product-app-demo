@@ -22,7 +22,7 @@ export function createApp() {
   app.get("/health", (_req, res) => res.json({ ok: true }));
 
   app.use("/api/products", productRouter);
-
+   
   // simple error handler
   app.use((err: any, _req: any, res: any, _next: any) => {
     console.error(err);
